@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Murach Survey</title>
+
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="card">
+
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="images/Murach_image.jpg"
+                 alt="Murach Logo"
+                 class="logo">
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Survey</h1>
+
+            <p>
+                If you have a moment, we'd appreciate it if
+                you would fill out this survey.
+            </p>
+        </div>
+
+        <form action="emailList" method="post">
+
+            <!-- Personal Information -->
+            <section class="form-section">
+
+                <h2>Your Information</h2>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="Enter your first name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Enter your last name"
+                        required>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="form-group">
+
+                    <label>Date of Birth</label>
+
+                    <div class="date-inputs">
+
+                        <select name="dobDay" required>
+                            <option value="">Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+
+                        <select name="dobMonth" required>
+                            <option value="">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+
+                        <input
+                            type="number"
+                            name="dobYear"
+                            placeholder="Year"
+                            min="1900"
+                            max="2026"
+                            required>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- How did you hear -->
+            <section class="form-section">
+
+                <h2>How did you hear about us?</h2>
+
+                <div class="radio-options">
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="source"
+                            value="Search engine"
+                            required>
+                        <span>Search engine</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="source"
+                            value="Word of mouth">
+                        <span>Word of mouth</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="source"
+                            value="Social media">
+                        <span>Social media</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="source"
+                            value="Other">
+                        <span>Other</span>
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- Announcements -->
+            <section class="form-section">
+
+                <h2>
+                    Would you like to receive announcements
+                    about new CDs and special offers?
+                </h2>
+
+                <label class="check-option">
+                    <input
+                        type="checkbox"
+                        name="announcements1"
+                        value="yes">
+                    <span>YES, I'd like that.</span>
+                </label>
+
+                <label class="check-option">
+                    <input
+                        type="checkbox"
+                        name="announcements2"
+                        value="yes">
+                    <span>
+                        YES, please send me email announcements
+                    </span>
+                </label>
+
+            </section>
+
+
+            <!-- Contact -->
+            <section class="form-section">
+
+                <div class="contact-row">
+
+                    <label for="contactMethod">
+                        Please contact me by
+                    </label>
+
+                    <select
+                        id="contactMethod"
+                        name="contactMethod">
+
+                        <option value="Postal mail">
+                            Email or Postal mail
+                        </option>
+
+                        <option value="Email">
+                            Email
+                        </option>
+
+                        <option value="Postal mail">
+                            Postal mail
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- Submit -->
+            <div class="submit-area">
+
+                <input
+                    type="submit"
+                    value="Submit Survey"
+                    id="submit">
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
